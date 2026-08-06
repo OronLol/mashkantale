@@ -220,9 +220,9 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
 }
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--nav-h)}
 .brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-/* הלוגו כחול כהה — על רקע כהה הוא הופך ללבן נקי */
-.brand img{height:52px;width:auto;transition:height .4s var(--ease);filter:brightness(0) invert(1)}
-.scrolled .brand img{height:44px}
+/* logo-white.png — גרסת לוגו לבנה על רקע שקוף, לרקעים הכהים */
+.brand img{height:56px;width:auto;transition:height .4s var(--ease)}
+.scrolled .brand img{height:46px}
 .brand-fallback{font-family:'Frank Ruhl Libre',serif;font-size:1.3rem;font-weight:700;color:#fff}
 
 .nav-links{display:flex;align-items:center;gap:4px}
@@ -314,7 +314,30 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
 .hero .btn-wa{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22);box-shadow:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .hero .btn-wa:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4)}
 .hero .wrap{position:relative;z-index:1}
-.hero-inner{max-width:920px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);
+  gap:clamp(20px,3.5vw,56px);
+  align-items:center;
+}
+.hero-copy{max-width:640px}
+.hero-notes{grid-column:1 / -1}
+
+/* הפורטרט — ניצב על הכחול עם הילה רכה ודהייה בתחתית */
+.hero-figure{position:relative;margin:0;justify-self:center;width:min(400px,100%)}
+.hero-figure::before{
+  content:'';position:absolute;z-index:0;
+  inset:6% -20% -4% -20%;
+  background:radial-gradient(ellipse at 50% 58%,rgba(96,150,205,.36),rgba(96,150,205,0) 68%);
+}
+.hero-figure img{
+  position:relative;z-index:1;width:100%;height:auto;
+  -webkit-mask-image:linear-gradient(to bottom,#000 68%,rgba(0,0,0,0) 98%);
+  mask-image:linear-gradient(to bottom,#000 68%,rgba(0,0,0,0) 98%);
+  filter:drop-shadow(0 26px 42px rgba(0,0,0,.45));
+}
+/* אם התמונה חסרה — הטקסט נפרס על כל הרוחב */
+.hero-grid.solo{grid-template-columns:minmax(0,1fr)}
 .hero h1{
   font-size:var(--step-4);
   font-weight:500;
@@ -633,7 +656,7 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
   display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;
   margin-bottom:26px;
 }
-.footer-top img{height:46px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.footer-top img{height:50px;width:auto;opacity:.9}
 .footer-nav{display:flex;flex-wrap:wrap;gap:6px 22px}
 .footer-nav a{text-decoration:none;color:#9aa8b6;transition:color .3s}
 .footer-nav a:hover{color:#fff}
@@ -683,6 +706,7 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
 
 /* ---------- רספונסיביות ---------- */
 @media (max-width:1000px){
+  .hero-figure{width:min(330px,100%)}
   .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .about-grid{grid-template-columns:1fr}
   .about-figure{position:static;max-width:330px}
@@ -697,6 +721,8 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
   .wa-float{display:none}
   .mobile-bar{display:flex}
   body{padding-bottom:74px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .hero-figure{width:min(290px,74%)}
   .hero-notes{gap:12px 24px}
 }
 @media (max-width:560px){
@@ -704,6 +730,7 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
   .hero h1{letter-spacing:-.015em}
   .hero-actions{flex-direction:column;align-items:stretch}
   .hero-actions .btn{width:100%}
+  .hero-figure{width:min(250px,68%)}
   .hero-notes{flex-direction:column;gap:11px}
   .svc-grid{grid-template-columns:minmax(0,1fr);border-radius:var(--r)}
   .step{padding-inline-start:60px}
@@ -723,7 +750,7 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
 <header class="site-header" id="siteHeader">
   <div class="wrap nav">
     <a class="brand" href="#" aria-label="משכנתאלה — לראש העמוד">
-      <img src="assets/logo.png" alt="משכנתאלה" width="200" height="52"
+      <img src="assets/logo-white.png" alt="משכנתאלה" width="327" height="136"
            onerror="this.outerHTML='<span class=&quot;brand-fallback&quot;>משכנתאלה</span>'">
     </a>
 
@@ -758,8 +785,8 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
 
 <!-- ==================== פתיחה ==================== -->
 <section class="hero" aria-labelledby="heroTitle">
-  <div class="wrap">
-    <div class="hero-inner">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
       <p class="eyebrow">חיים ג'נאח · ייעוץ משכנתאות</p>
 
       <h1 id="heroTitle">משכנתא היא לא רק <em>ריבית</em>.</h1>
@@ -780,8 +807,14 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
           שליחת הודעה בוואטסאפ
         </a>
       </div>
+    </div>
 
-      <ul class="hero-notes">
+    <figure class="hero-figure">
+      <img src="assets/portrait.png" alt="חיים ג'נאח" width="560" height="767" fetchpriority="high"
+           onerror="var g=this.closest('.hero-grid');this.closest('figure').remove();g.classList.add('solo')">
+    </figure>
+
+    <ul class="hero-notes">
         <li>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
           השיחה הראשונה בלי עלות
@@ -795,7 +828,6 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
           אענה על שאלות גם אם בסוף לא נעבוד יחד
         </li>
       </ul>
-    </div>
   </div>
 </section>
 
@@ -875,18 +907,8 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
 
 <!-- ==================== אודות ==================== -->
 <section class="about" id="about" aria-labelledby="aboutTitle">
-  <div class="wrap about-grid">
-
-    <figure class="about-figure reveal">
-      <!-- כשיגיע קובץ assets/portrait.jpg הוא יופיע כאן אוטומטית.
-           עד אז הפריט כולו מוסר והטקסט נפרס על מלוא הרוחב. -->
-      <img class="portrait" src="assets/portrait.jpg" alt="חיים ג'נאח" width="340" height="425"
-           onerror="var g=this.closest('.about-grid');this.closest('figure').remove();g.classList.add('solo')">
-      <figcaption>
-        <strong>חיים ג'נאח</strong>
-        <span>ייעוץ משכנתאות · פעילות בכל הארץ</span>
-      </figcaption>
-    </figure>
+  <!-- הפורטרט מופיע ב-Hero; כאן הטקסט מקבל את מלוא תשומת הלב -->
+  <div class="wrap about-grid solo">
 
     <div class="about-body reveal">
       <p class="eyebrow">עליי</p>
@@ -1245,7 +1267,7 @@ section{padding:clamp(68px,9vw,124px) 0;position:relative}
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-top">
-      <img src="assets/logo.png" alt="משכנתאלה" width="180" height="46" loading="lazy" onerror="this.remove()">
+      <img src="assets/logo-white.png" alt="משכנתאלה" width="327" height="136" loading="lazy" onerror="this.remove()">
       <nav class="footer-nav" aria-label="ניווט תחתון">
         <a href="#services">במה אני עוזר</a>
         <a href="#about">עליי</a>
