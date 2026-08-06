@@ -1,1 +1,1 @@
-https://github.com/OronLol/mashkantale.git
+https://oronlol.github.io/mashkantale/
