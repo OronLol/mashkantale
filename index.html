@@ -1,854 +1,1448 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="rtl" class="no-js">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>משכנתאלה — חיים ג'נאח | ייעוץ משכנתאות</title>
-<meta name="description" content="משכנתאלה — ייעוץ משכנתאות אישי ומקצועי עם חיים ג'נאח. חיסכון של מאות אלפי שקלים, ליווי מלא מול הבנקים עד קבלת המשכנתא. פגישת ייעוץ ראשונה ללא התחייבות.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbfaf8">
+
+<title>חיים ג'נאח · ייעוץ משכנתאות | משכנתאלה</title>
+<meta name="description" content="משכנתא היא לא רק ריבית — היא החלטה שתחיו איתה שנים. אני עוזר למשפחות להבין את המשכנתא שלהן לעומק לפני שהן חותמות, ולבנות אותה לפי החיים שלהן. שיחת היכרות ללא עלות.">
+<meta name="author" content="חיים ג'נאח">
+<link rel="canonical" href="https://oronlol.github.io/mashkantale/">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="משכנתאלה — חיים ג'נאח">
+<meta property="og:title" content="חיים ג'נאח · ייעוץ משכנתאות">
+<meta property="og:description" content="משכנתא היא לא רק ריבית — היא החלטה שתחיו איתה שנים. ליווי שמתחיל בלהבין אתכם, ונגמר רק כשהתהליך נגמר.">
+<meta property="og:url" content="https://oronlol.github.io/mashkantale/">
+<meta property="og:image" content="https://oronlol.github.io/mashkantale/assets/logo.png">
+<meta property="og:image:alt" content="משכנתאלה — ייעוץ משכנתאות">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="חיים ג'נאח · ייעוץ משכנתאות">
+<meta name="twitter:description" content="משכנתא היא לא רק ריבית — היא החלטה שתחיו איתה שנים.">
+<meta name="twitter:image" content="https://oronlol.github.io/mashkantale/assets/logo.png">
+
+<link rel="icon" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Frank+Ruhl+Libre:wght@300;400;500;700&display=swap">
+
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
 <style>
-  /* =========================================
-     הגדרות בסיס — צבעים וגופנים
-     ========================================= */
-  :root {
-    --navy: #0d2340;          /* כחול כהה ראשי */
-    --navy-light: #14335c;
-    --navy-lighter: #1d4478;
-    --gold: #c9a13b;          /* זהב — צבע הדגשה */
-    --gold-light: #e3c56b;
-    --whatsapp: #25d366;
-    --whatsapp-dark: #1eb954;
-    --bg: #ffffff;
-    --bg-soft: #f5f7fa;
-    --text: #212b38;
-    --text-soft: #5a6b80;
-    --radius: 14px;
-    --shadow: 0 8px 30px rgba(13, 35, 64, 0.10);
-    --shadow-strong: 0 14px 45px rgba(13, 35, 64, 0.18);
-  }
+/* =======================================================
+   משכנתאלה — שפה עיצובית
+   נייר חם, כחול עמוק ושקט, הרבה אוויר.
+   ======================================================= */
+:root{
+  --ink:#131c26;
+  --ink-2:#3b4a58;
+  --ink-3:#6b7885;
+  --brand:#1e4d7b;
+  --brand-d:#163a5d;
+  --brand-l:#3a6e9e;
+  --brand-tint:#eef3f8;
+  --paper:#fbfaf8;
+  --paper-2:#f4f2ed;
+  --white:#fff;
+  --line:#e7e3db;
+  --line-2:#f0ede6;
+  --wa:#25d366;
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  --r-sm:10px;
+  --r:16px;
+  --r-lg:24px;
 
-  html { scroll-behavior: smooth; }
+  --shadow-xs:0 1px 2px rgba(19,28,38,.04);
+  --shadow-sm:0 4px 16px -6px rgba(19,28,38,.10);
+  --shadow:0 18px 48px -24px rgba(19,28,38,.28);
+  --shadow-lg:0 40px 80px -40px rgba(19,28,38,.34);
 
-  body {
-    font-family: 'Heebo', 'Segoe UI', Arial, sans-serif;
-    color: var(--text);
-    background: var(--bg);
-    line-height: 1.65;
-    overflow-x: hidden;
-  }
+  --ease:cubic-bezier(.22,.68,.32,1);
+  --nav-h:78px;
 
-  img { max-width: 100%; display: block; }
+  --step--1:clamp(.86rem,.83rem + .14vw,.94rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.12rem);
+  --step-1:clamp(1.14rem,1.06rem + .38vw,1.35rem);
+  --step-2:clamp(1.4rem,1.24rem + .78vw,1.9rem);
+  --step-3:clamp(1.7rem,1.4rem + 1.5vw,2.6rem);
+  --step-4:clamp(2.1rem,1.6rem + 2.6vw,3.7rem);
+}
 
-  .container { width: min(1140px, 92%); margin: 0 auto; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-  section { padding: 72px 0; }
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+  scroll-padding-top:calc(var(--nav-h) + 16px);
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
 
-  h2.section-title {
-    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
-    font-weight: 800;
-    color: var(--navy);
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  p.section-sub {
-    text-align: center;
-    color: var(--text-soft);
-    font-size: 1.1rem;
-    max-width: 640px;
-    margin: 0 auto 48px;
-  }
-  .gold-line {
-    width: 64px; height: 4px; border-radius: 2px;
-    background: linear-gradient(90deg, var(--gold), var(--gold-light));
-    margin: 14px auto 18px;
-  }
+body{
+  font-family:'Assistant',-apple-system,'Segoe UI',system-ui,sans-serif;
+  font-size:var(--step-0);
+  font-weight:400;
+  line-height:1.75;
+  color:var(--ink-2);
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
 
-  /* =========================================
-     כותרת עליונה (Header)
-     ========================================= */
-  header {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(13, 35, 64, 0.97);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 18px rgba(0,0,0,0.25);
-  }
-  .header-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 14px 0;
-  }
-  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  /* מקום ללוגו — כשיגיע קובץ לוגו, מחליפים את ה-div הזה בתגית img */
-  .logo-mark {
-    width: 46px; height: 46px; border-radius: 10px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    display: grid; place-items: center;
-    font-weight: 900; font-size: 1.3rem; color: var(--navy);
-  }
-  .logo-img {
-    height: 72px; width: auto;
-    background: #fff;             /* הלוגו על רקע לבן כדי לבלוט על הכחול */
-    padding: 6px 14px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
-  }
-  @media (max-width: 560px) {
-    .logo-img { height: 56px; padding: 4px 10px; }
-  }
-  /* לוגו גדול באזור הפתיחה */
-  .hero-logo {
-    width: min(300px, 70vw);
-    background: #fff;
-    padding: 12px 22px;
-    border-radius: 16px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.3);
-    margin-bottom: 26px;
-  }
-  @media (max-width: 920px) {
-    .hero-logo { margin-inline: auto; }
-  }
-  .logo-text { color: #fff; display: inline-block; }
-  .logo-text strong { display: block; font-size: 1.15rem; font-weight: 800; line-height: 1.2; }
-  .logo-text span { font-size: 0.8rem; color: var(--gold-light); }
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 
-  nav.main-nav { display: flex; gap: 28px; }
-  nav.main-nav a {
-    color: #dbe4ef; text-decoration: none; font-weight: 500; font-size: 0.97rem;
-    transition: color 0.2s;
-  }
-  nav.main-nav a:hover { color: var(--gold-light); }
+h1,h2,h3,h4,.display{
+  font-family:'Frank Ruhl Libre',Georgia,serif;
+  color:var(--ink);
+  font-weight:500;
+  line-height:1.24;
+  letter-spacing:-.01em;
+}
 
-  .header-cta {
-    background: var(--gold);
-    color: var(--navy);
-    font-weight: 700;
-    padding: 10px 22px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .header-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(201,161,59,0.45); }
+::selection{background:var(--brand);color:#fff}
 
-  /* =========================================
-     אזור פתיחה (Hero)
-     ========================================= */
-  .hero {
-    background:
-      radial-gradient(ellipse at 80% 20%, rgba(201,161,59,0.14), transparent 55%),
-      linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 60%, var(--navy-lighter) 100%);
-    color: #fff;
-    padding: 84px 0 96px;
-  }
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 56px;
-    align-items: center;
-  }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(201,161,59,0.15);
-    border: 1px solid rgba(201,161,59,0.45);
-    color: var(--gold-light);
-    font-size: 0.88rem; font-weight: 600;
-    padding: 7px 16px; border-radius: 50px;
-    margin-bottom: 22px;
-  }
-  .hero h1 {
-    font-size: clamp(2rem, 4.5vw, 3.1rem);
-    font-weight: 900;
-    line-height: 1.25;
-    margin-bottom: 20px;
-  }
-  .hero h1 .gold { color: var(--gold-light); }
-  .hero p.lead {
-    font-size: 1.18rem;
-    color: #c7d3e2;
-    max-width: 540px;
-    margin-bottom: 34px;
-  }
-  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-weight: 700; font-size: 1.05rem;
-    padding: 15px 30px; border-radius: 50px;
-    text-decoration: none; cursor: pointer; border: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-whatsapp {
-    background: var(--whatsapp); color: #fff;
-    box-shadow: 0 8px 24px rgba(37,211,102,0.35);
-  }
-  .btn-whatsapp:hover { background: var(--whatsapp-dark); box-shadow: 0 10px 28px rgba(37,211,102,0.5); }
-  .btn-outline {
-    background: transparent; color: #fff;
-    border: 2px solid rgba(255,255,255,0.4);
-  }
-  .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+:focus-visible{
+  outline:2px solid var(--brand);
+  outline-offset:3px;
+  border-radius:4px;
+}
 
-  .hero-trust {
-    display: flex; gap: 22px; margin-top: 36px; flex-wrap: wrap;
-    color: #b4c3d6; font-size: 0.92rem;
-  }
-  .hero-trust span { display: flex; align-items: center; gap: 7px; }
-  .hero-trust svg { flex-shrink: 0; }
+.skip{
+  position:absolute;right:16px;top:-100px;z-index:999;
+  background:var(--ink);color:#fff;padding:12px 20px;border-radius:0 0 12px 12px;
+  transition:top .2s var(--ease);
+}
+.skip:focus{top:0}
 
-  /* תמונת היועץ — מקום שמור, יוחלף בתמונה אמיתית */
-  .hero-photo-wrap { position: relative; justify-self: center; }
-  .hero-photo {
-    width: min(340px, 80vw);
-    aspect-ratio: 4 / 5;
-    border-radius: 22px;
-    background: linear-gradient(150deg, #223f68, #17304f);
-    border: 1px solid rgba(201,161,59,0.35);
-    display: grid; place-items: center;
-    box-shadow: var(--shadow-strong);
-    overflow: hidden;
-  }
-  .hero-photo .placeholder-icon { opacity: 0.45; }
-  .hero-photo-caption {
-    position: absolute; bottom: -20px; right: 50%; transform: translateX(50%);
-    background: #fff; color: var(--navy);
-    border-radius: 12px; padding: 12px 26px;
-    box-shadow: var(--shadow);
-    text-align: center; white-space: nowrap;
-  }
-  .hero-photo-caption strong { display: block; font-size: 1.05rem; font-weight: 800; }
-  .hero-photo-caption span { font-size: 0.85rem; color: var(--text-soft); }
+/* ---------- פריסה ---------- */
+.wrap{width:min(1180px,100% - 2.6rem);margin-inline:auto}
+.narrow{width:min(760px,100%);margin-inline:auto}
+section{padding:clamp(68px,9vw,124px) 0;position:relative}
 
-  /* =========================================
-     פס נתונים (Stats)
-     ========================================= */
-  .stats { background: var(--bg-soft); padding: 44px 0; }
-  .stats-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-    text-align: center;
-  }
-  .stat strong {
-    display: block;
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    font-weight: 900; color: var(--navy);
-  }
-  .stat strong em { color: var(--gold); font-style: normal; }
-  .stat span { color: var(--text-soft); font-size: 0.95rem; }
+.eyebrow{
+  font-family:'Assistant',sans-serif;
+  font-size:.78rem;font-weight:600;
+  letter-spacing:.16em;
+  color:var(--brand-l);
+  text-transform:none;
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:18px;
+}
+.eyebrow::before{
+  content:'';width:26px;height:1px;background:currentColor;opacity:.55;flex-shrink:0;
+}
+.eyebrow.center{justify-content:center}
+.eyebrow.center::after{content:'';width:26px;height:1px;background:currentColor;opacity:.55}
 
-  /* =========================================
-     שירותים (Services)
-     ========================================= */
-  .services-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
-  }
-  .service-card {
-    background: #fff;
-    border: 1px solid #e6ebf2;
-    border-radius: var(--radius);
-    padding: 30px 24px;
-    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-  }
-  .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
-    border-color: rgba(201,161,59,0.5);
-  }
-  .service-icon {
-    width: 54px; height: 54px; border-radius: 13px;
-    background: linear-gradient(135deg, rgba(201,161,59,0.16), rgba(201,161,59,0.06));
-    display: grid; place-items: center;
-    margin-bottom: 18px;
-  }
-  .service-card h3 { font-size: 1.15rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
-  .service-card p { color: var(--text-soft); font-size: 0.95rem; }
+.head{max-width:660px;margin-bottom:clamp(40px,5vw,68px)}
+.head.center{margin-inline:auto;text-align:center}
+.head.center .eyebrow{justify-content:center}
+.head.center .eyebrow::after{content:'';width:26px;height:1px;background:currentColor;opacity:.55}
+.head h2{font-size:var(--step-3);margin-bottom:16px}
+.head p{font-size:var(--step-1);color:var(--ink-3);font-weight:300;line-height:1.62}
 
-  /* =========================================
-     אודות (About)
-     ========================================= */
-  .about { background: var(--bg-soft); }
-  .about-grid {
-    display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center;
-  }
-  .about-photo {
-    aspect-ratio: 4 / 5;
-    max-width: 360px;
-    border-radius: 22px;
-    background: linear-gradient(150deg, #dfe7f1, #cbd7e6);
-    display: grid; place-items: center;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-  }
-  .about h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 6px; }
-  .about .role { color: var(--gold); font-weight: 700; margin-bottom: 18px; }
-  .about p { color: var(--text-soft); margin-bottom: 14px; }
-  .about ul { list-style: none; margin: 22px 0 30px; display: grid; gap: 12px; }
-  .about ul li { display: flex; align-items: flex-start; gap: 11px; font-weight: 500; }
-  .about ul li svg { flex-shrink: 0; margin-top: 4px; }
+/* ---------- כפתורים ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Assistant',sans-serif;
+  font-size:1rem;font-weight:600;
+  padding:15px 30px;
+  border-radius:100px;
+  text-decoration:none;
+  min-height:52px;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),background-color .3s,color .3s,border-color .3s;
+  will-change:transform;
+}
+.btn svg{flex-shrink:0}
+.btn-primary{
+  background:var(--brand);color:#fff;
+  box-shadow:0 12px 28px -14px rgba(30,77,123,.85);
+}
+.btn-primary:hover{background:var(--brand-d);transform:translateY(-2px);box-shadow:0 18px 34px -14px rgba(30,77,123,.75)}
+.btn-ghost{
+  background:transparent;color:var(--ink);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-xs);
+}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-2px);background:var(--white)}
+.btn-wa{background:var(--white);color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow-xs)}
+.btn-wa svg{color:var(--wa)}
+.btn-wa:hover{border-color:var(--wa);transform:translateY(-2px);box-shadow:0 14px 30px -16px rgba(37,211,102,.6)}
+.btn-lg{padding:17px 36px;font-size:1.05rem;min-height:58px}
 
-  /* =========================================
-     תהליך העבודה (Process)
-     ========================================= */
-  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-  .step {
-    position: relative;
-    background: #fff;
-    border: 1px solid #e6ebf2;
-    border-radius: var(--radius);
-    padding: 34px 24px 28px;
-    text-align: center;
-  }
-  .step-num {
-    position: absolute; top: -20px; right: 50%; transform: translateX(50%);
-    width: 42px; height: 42px; border-radius: 50%;
-    background: var(--navy); color: var(--gold-light);
-    display: grid; place-items: center;
-    font-weight: 800; font-size: 1.1rem;
-    border: 3px solid #fff;
-    box-shadow: var(--shadow);
-  }
-  .step h3 { font-size: 1.08rem; font-weight: 800; color: var(--navy); margin: 8px 0; }
-  .step p { color: var(--text-soft); font-size: 0.93rem; }
+.link-arrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:600;color:var(--brand);text-decoration:none;font-size:.98rem;
+}
+.link-arrow svg{transition:transform .35s var(--ease)}
+.link-arrow:hover svg{transform:translateX(-5px)}
 
-  /* =========================================
-     המלצות (Testimonials)
-     ========================================= */
-  .testimonials { background: var(--navy); color: #fff; }
-  .testimonials .section-title, .testimonials .section-sub { color: #fff; }
-  .testimonials .section-sub { color: #b4c3d6; }
-  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .testi-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: var(--radius);
-    padding: 28px 24px;
-  }
-  .testi-stars { color: var(--gold-light); letter-spacing: 3px; margin-bottom: 14px; }
-  .testi-card p { color: #d5dfeb; font-size: 0.97rem; margin-bottom: 18px; }
-  .testi-card footer { display: flex; align-items: center; gap: 12px; }
-  .testi-avatar {
-    width: 42px; height: 42px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    display: grid; place-items: center;
-    color: var(--navy); font-weight: 800;
-  }
-  .testi-card footer strong { display: block; font-size: 0.95rem; }
-  .testi-card footer span { font-size: 0.82rem; color: #9fb1c6; }
+/* ---------- כותרת עליונה ---------- */
+.site-header{
+  position:fixed;inset-inline:0;top:0;z-index:100;
+  transition:background-color .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.site-header.scrolled{
+  background:rgba(251,250,248,.82);
+  -webkit-backdrop-filter:saturate(180%) blur(16px);
+  backdrop-filter:saturate(180%) blur(16px);
+  border-bottom-color:var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--nav-h)}
+.brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.brand img{height:52px;width:auto;transition:height .4s var(--ease)}
+.scrolled .brand img{height:44px}
+.brand-fallback{font-family:'Frank Ruhl Libre',serif;font-size:1.3rem;font-weight:700;color:var(--brand)}
 
-  /* =========================================
-     שאלות נפוצות (FAQ)
-     ========================================= */
-  .faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; }
-  details {
-    background: #fff;
-    border: 1px solid #e6ebf2;
-    border-radius: var(--radius);
-    padding: 20px 24px;
-    transition: box-shadow 0.2s;
-  }
-  details[open] { box-shadow: var(--shadow); border-color: rgba(201,161,59,0.4); }
-  summary {
-    font-weight: 700; color: var(--navy); cursor: pointer;
-    list-style: none; display: flex; justify-content: space-between; align-items: center;
-    font-size: 1.02rem;
-  }
-  summary::-webkit-details-marker { display: none; }
-  summary::after {
-    content: '+'; font-size: 1.5rem; color: var(--gold);
-    transition: transform 0.25s; font-weight: 400; line-height: 1;
-  }
-  details[open] summary::after { transform: rotate(45deg); }
-  details p { margin-top: 14px; color: var(--text-soft); font-size: 0.97rem; }
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{
+  position:relative;text-decoration:none;color:var(--ink-2);
+  font-size:.97rem;font-weight:500;padding:9px 15px;border-radius:100px;
+  transition:color .28s var(--ease),background-color .28s var(--ease);
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:4px;right:50%;transform:translateX(50%) scaleX(0);
+  width:16px;height:2px;border-radius:2px;background:var(--brand);
+  transition:transform .35s var(--ease);
+}
+.nav-links a:hover{color:var(--brand)}
+.nav-links a:hover::after{transform:translateX(50%) scaleX(1)}
 
-  /* =========================================
-     יצירת קשר (Contact)
-     ========================================= */
-  .contact { background: var(--bg-soft); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-  .contact-info h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--navy); margin-bottom: 14px; }
-  .contact-info p { color: var(--text-soft); margin-bottom: 26px; max-width: 440px; }
-  .contact-line {
-    display: flex; align-items: center; gap: 14px;
-    margin-bottom: 16px; font-weight: 600; color: var(--navy);
-  }
-  .contact-line .ico {
-    width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
-    background: #fff; border: 1px solid #e6ebf2;
-    display: grid; place-items: center;
-    box-shadow: 0 3px 10px rgba(13,35,64,0.06);
-  }
-  .contact-line a { color: var(--navy); text-decoration: none; }
-  .contact-line a:hover { color: var(--gold); }
+.nav-cta{
+  background:var(--ink);color:#fff;text-decoration:none;
+  font-size:.94rem;font-weight:600;padding:11px 22px;border-radius:100px;
+  transition:background-color .3s,transform .3s var(--ease);
+  white-space:nowrap;
+}
+.nav-cta:hover{background:var(--brand);transform:translateY(-1px)}
 
-  form.lead-form {
-    background: #fff;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 34px 30px;
-  }
-  form.lead-form h3 { font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
-  form.lead-form .form-sub { color: var(--text-soft); font-size: 0.92rem; margin-bottom: 22px; }
-  .form-row { margin-bottom: 16px; }
-  .form-row label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: var(--navy); }
-  .form-row input, .form-row select, .form-row textarea {
-    width: 100%;
-    font-family: inherit; font-size: 0.98rem;
-    padding: 12px 14px;
-    border: 1.5px solid #dbe3ec;
-    border-radius: 10px;
-    background: #fbfcfe;
-    transition: border-color 0.2s;
-  }
-  .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
-    outline: none; border-color: var(--gold);
-  }
-  .form-submit {
-    width: 100%; justify-content: center;
-    background: var(--whatsapp); color: #fff;
-    font-size: 1.08rem;
-    box-shadow: 0 8px 22px rgba(37,211,102,0.3);
-  }
-  .form-note { text-align: center; font-size: 0.8rem; color: var(--text-soft); margin-top: 12px; }
+.nav-toggle{
+  display:none;width:46px;height:46px;border-radius:50%;
+  align-items:center;justify-content:center;
+  border:1px solid var(--line);background:rgba(255,255,255,.7);
+}
+.nav-toggle span{display:block;width:19px;height:1.5px;background:var(--ink);border-radius:2px;position:relative;transition:background-color .2s}
+.nav-toggle span::before,.nav-toggle span::after{
+  content:'';position:absolute;right:0;width:19px;height:1.5px;background:var(--ink);border-radius:2px;
+  transition:transform .35s var(--ease),top .25s var(--ease);
+}
+.nav-toggle span::before{top:-6px}
+.nav-toggle span::after{top:6px}
+.nav-toggle[aria-expanded="true"] span{background:transparent}
+.nav-toggle[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
 
-  /* =========================================
-     תחתית (Footer)
-     ========================================= */
-  footer.site-footer {
-    background: var(--navy);
-    color: #9fb1c6;
-    padding: 34px 0;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-  footer.site-footer strong { color: #fff; }
-  footer.site-footer .disclaimer { font-size: 0.78rem; margin-top: 10px; opacity: 0.75; max-width: 640px; margin-inline: auto; }
+.mobile-panel{
+  position:fixed;inset-inline:0;top:var(--nav-h);z-index:99;
+  background:rgba(251,250,248,.97);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
+  padding:8px 0 26px;
+  display:none;
+  animation:panelIn .4s var(--ease);
+}
+.mobile-panel.open{display:block}
+@keyframes panelIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.mobile-panel a{
+  display:block;text-decoration:none;color:var(--ink);
+  font-size:1.06rem;font-weight:500;padding:15px 4px;
+  border-bottom:1px solid var(--line-2);
+}
+.mobile-panel a:last-of-type{border-bottom:none}
+.mobile-panel .btn{width:100%;margin-top:18px}
 
-  /* =========================================
-     כפתור וואטסאפ צף
-     ========================================= */
-  .wa-float {
-    position: fixed; bottom: 24px; left: 24px; z-index: 200;
-    width: 62px; height: 62px; border-radius: 50%;
-    background: var(--whatsapp);
-    display: grid; place-items: center;
-    box-shadow: 0 8px 26px rgba(37,211,102,0.5);
-    transition: transform 0.2s;
-  }
-  .wa-float:hover { transform: scale(1.1); }
-  .wa-float::before {
-    content: '';
-    position: absolute; inset: 0; border-radius: 50%;
-    background: var(--whatsapp);
-    animation: wa-pulse 2s infinite;
-    z-index: -1;
-  }
-  @keyframes wa-pulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    100% { transform: scale(1.55); opacity: 0; }
-  }
+/* ---------- Hero ---------- */
+.hero{
+  padding-top:calc(var(--nav-h) + clamp(48px,7vw,96px));
+  padding-bottom:clamp(60px,8vw,104px);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;z-index:0;
+  inset-inline-start:-14%;top:-24%;
+  width:min(760px,88vw);aspect-ratio:1;
+  background:radial-gradient(circle at 50% 50%,rgba(30,77,123,.10),rgba(30,77,123,0) 68%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;z-index:0;
+  inset-inline-end:-16%;bottom:-34%;
+  width:min(620px,80vw);aspect-ratio:1;
+  background:radial-gradient(circle at 50% 50%,rgba(180,150,105,.13),rgba(180,150,105,0) 66%);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:1}
+.hero-inner{max-width:920px}
+.hero h1{
+  font-size:var(--step-4);
+  font-weight:500;
+  line-height:1.14;
+  letter-spacing:-.025em;
+  margin-bottom:26px;
+  text-wrap:balance;
+}
+.hero h1 em{font-style:normal;color:var(--brand);position:relative;white-space:nowrap}
+.hero h1 em::after{
+  content:'';position:absolute;inset-inline:0;bottom:.06em;height:.09em;
+  background:linear-gradient(90deg,rgba(30,77,123,.28),rgba(30,77,123,.08));
+  border-radius:3px;
+}
+.hero .lead{
+  font-size:var(--step-1);
+  font-weight:300;
+  color:var(--ink-2);
+  max-width:640px;
+  line-height:1.68;
+  margin-bottom:38px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-notes{
+  display:flex;flex-wrap:wrap;gap:10px 30px;
+  padding-top:30px;border-top:1px solid var(--line);
+  max-width:800px;
+}
+.hero-notes li{
+  list-style:none;display:flex;align-items:center;gap:9px;
+  font-size:var(--step--1);color:var(--ink-3);
+}
+.hero-notes svg{color:var(--brand-l);flex-shrink:0}
 
-  /* =========================================
-     רספונסיביות — מובייל
-     ========================================= */
-  @media (max-width: 920px) {
-    nav.main-nav { display: none; }
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .hero p.lead { margin-inline: auto; }
-    .hero-ctas { justify-content: center; }
-    .hero-trust { justify-content: center; }
-    .hero-photo-wrap { margin-top: 16px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .about-grid { grid-template-columns: 1fr; }
-    .about-photo { margin: 0 auto; }
-    .process-grid { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
-    .testi-grid { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 560px) {
-    section { padding: 56px 0; }
-    .services-grid { grid-template-columns: 1fr; }
-    .process-grid { grid-template-columns: 1fr; row-gap: 40px; }
-    .stats-grid { gap: 18px; }
-    .btn { width: 100%; justify-content: center; }
-  }
+/* ---------- אמירה שקטה ---------- */
+.statement{
+  background:var(--white);
+  border-block:1px solid var(--line);
+  padding:clamp(56px,7vw,92px) 0;
+}
+.statement p{
+  font-family:'Frank Ruhl Libre',Georgia,serif;
+  font-size:var(--step-2);
+  font-weight:300;
+  line-height:1.5;
+  color:var(--ink);
+  text-align:center;
+  max-width:800px;margin-inline:auto;
+  text-wrap:balance;
+}
+.statement .sig{
+  display:block;margin-top:24px;
+  font-family:'Assistant',sans-serif;
+  font-size:.9rem;font-weight:500;letter-spacing:.06em;
+  color:var(--ink-3);
+}
+
+/* ---------- שירותים ---------- */
+.services{background:var(--paper)}
+.svc-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr)); /* שישה כרטיסים = שתי שורות מלאות */
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+}
+.svc{
+  background:var(--white);
+  padding:clamp(30px,3.4vw,44px) clamp(26px,3vw,38px);
+  transition:background-color .4s var(--ease),transform .4s var(--ease);
+  position:relative;
+}
+.svc:hover{background:#fdfdfc}
+.svc-ico{
+  width:46px;height:46px;margin-bottom:22px;
+  display:grid;place-items:center;
+  color:var(--brand);
+  transition:transform .5s var(--ease);
+}
+.svc:hover .svc-ico{transform:translateY(-3px)}
+.svc h3{font-size:var(--step-1);margin-bottom:12px;font-weight:500}
+.svc p{font-size:.99rem;color:var(--ink-3);line-height:1.72;font-weight:300}
+
+/* ---------- אודות ---------- */
+.about{background:var(--white);border-block:1px solid var(--line)}
+.about-grid{
+  display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);
+  gap:clamp(36px,5vw,80px);align-items:start;
+}
+.about-figure{position:sticky;top:calc(var(--nav-h) + 40px)}
+.portrait{
+  width:100%;aspect-ratio:4/5;object-fit:cover;
+  border-radius:var(--r-lg);
+  box-shadow:var(--shadow);
+}
+.about-figure figcaption{
+  margin-top:20px;padding-top:20px;border-top:1px solid var(--line);
+}
+.about-figure figcaption strong{
+  display:block;font-family:'Frank Ruhl Libre',serif;
+  font-size:1.28rem;font-weight:500;color:var(--ink);
+}
+.about-figure figcaption span{font-size:.92rem;color:var(--ink-3)}
+/* כשאין עדיין תמונה — הטקסט תופס את כל הרוחב בצורה נקייה */
+.about-grid.solo{grid-template-columns:minmax(0,1fr)}
+.about-grid.solo .about-body{max-width:780px;margin-inline:auto}
+.about-sign{
+  margin-top:36px;padding-top:24px;border-top:1px solid var(--line);
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+}
+.about-sign strong{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.2rem;font-weight:500;color:var(--ink);
+}
+.about-sign span{font-size:.92rem;color:var(--ink-3)}
+.about-body p{margin-bottom:20px;font-size:1.04rem;line-height:1.82;font-weight:300}
+.about-body p:last-of-type{margin-bottom:0}
+.about-body strong{font-weight:600;color:var(--ink)}
+.about-body h2{font-size:var(--step-3);margin-bottom:22px}
+.pullquote{
+  margin:34px 0;padding:4px 26px 4px 0;
+  border-inline-start:2px solid var(--brand);
+  font-family:'Frank Ruhl Libre',Georgia,serif;
+  font-size:var(--step-1);font-weight:400;line-height:1.55;color:var(--ink);
+}
+
+/* ---------- הגישה ---------- */
+.approach{background:var(--paper-2)}
+.appr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,2.6vw,36px)}
+.appr{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:clamp(28px,3vw,38px);
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .45s var(--ease);
+}
+.appr:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#dcd7cc}
+.appr-num{
+  font-family:'Frank Ruhl Libre',serif;
+  font-size:.9rem;font-weight:500;color:var(--brand-l);
+  letter-spacing:.1em;margin-bottom:16px;display:block;
+}
+.appr h3{font-size:var(--step-1);margin-bottom:12px;font-weight:500;line-height:1.35}
+.appr p{font-size:.99rem;color:var(--ink-3);line-height:1.75;font-weight:300}
+
+/* ---------- תהליך ---------- */
+.process{background:var(--white);border-block:1px solid var(--line)}
+.steps{position:relative;max-width:840px;margin-inline:auto}
+.steps::before{
+  content:'';position:absolute;top:14px;bottom:14px;inset-inline-start:23px;
+  width:1px;background:linear-gradient(180deg,var(--line),var(--line) 88%,transparent);
+}
+.step{
+  position:relative;
+  padding-inline-start:74px;
+  padding-block:0 clamp(34px,4vw,48px);
+}
+.step:last-child{padding-bottom:0}
+.step-dot{
+  position:absolute;inset-inline-start:0;top:0;
+  width:47px;height:47px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--white);
+  border:1px solid var(--line);
+  font-family:'Frank Ruhl Libre',serif;font-size:1.02rem;color:var(--brand);
+  transition:background-color .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease);
+}
+.step:hover .step-dot{background:var(--brand);color:#fff;border-color:var(--brand)}
+.step h3{font-size:var(--step-1);margin-bottom:9px;font-weight:500;padding-top:8px}
+.step p{color:var(--ink-3);font-weight:300;line-height:1.75}
+.step .meta{
+  display:inline-block;margin-top:12px;
+  font-size:.82rem;color:var(--brand-l);font-weight:600;
+  background:var(--brand-tint);padding:4px 13px;border-radius:100px;
+}
+
+/* ---------- שאלות ---------- */
+.faq{background:var(--paper)}
+.faq-list{max-width:840px;margin-inline:auto;border-top:1px solid var(--line)}
+.qa{border-bottom:1px solid var(--line)}
+.qa-btn{
+  width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;
+  text-align:start;padding:26px 4px;
+  font-family:'Frank Ruhl Libre',Georgia,serif;
+  font-size:var(--step-1);font-weight:500;color:var(--ink);line-height:1.4;
+  transition:color .3s var(--ease);
+}
+.qa-btn:hover{color:var(--brand)}
+.qa-sign{
+  flex-shrink:0;width:26px;height:26px;position:relative;margin-top:5px;
+}
+.qa-sign::before,.qa-sign::after{
+  content:'';position:absolute;top:50%;right:50%;
+  background:var(--brand);border-radius:2px;
+  transform:translate(50%,-50%);
+  transition:transform .4s var(--ease),opacity .3s var(--ease);
+}
+.qa-sign::before{width:13px;height:1.5px}
+.qa-sign::after{width:1.5px;height:13px}
+.qa-btn[aria-expanded="true"] .qa-sign::after{transform:translate(50%,-50%) rotate(90deg);opacity:0}
+.qa-panel{
+  display:grid;grid-template-rows:0fr;
+  transition:grid-template-rows .45s var(--ease);
+}
+.qa-panel.open{grid-template-rows:1fr}
+.qa-panel > div{overflow:hidden}
+.qa-panel p{
+  padding:0 4px 28px;color:var(--ink-3);font-weight:300;line-height:1.8;
+  max-width:70ch;
+}
+.no-js .qa-panel{grid-template-rows:1fr}
+
+/* ---------- יצירת קשר ---------- */
+.contact{background:var(--ink);color:#c8d2dc;position:relative;overflow:hidden}
+.contact::before{
+  content:'';position:absolute;inset-inline-start:-10%;top:-30%;
+  width:min(700px,90vw);aspect-ratio:1;
+  background:radial-gradient(circle,rgba(58,110,158,.22),transparent 66%);
+  pointer-events:none;
+}
+.contact .wrap{position:relative;z-index:1}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,470px);gap:clamp(40px,5vw,76px);align-items:start}
+.contact h2{color:#fff;font-size:var(--step-3);margin-bottom:18px}
+.contact .eyebrow{color:#7fa7cc}
+.contact-intro{font-size:var(--step-1);font-weight:300;color:#aebccb;max-width:480px;margin-bottom:38px;line-height:1.65}
+.ways{display:grid;gap:2px;margin-bottom:32px}
+.way{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 0;border-bottom:1px solid rgba(255,255,255,.09);
+  text-decoration:none;color:#fff;
+  transition:padding-inline-start .35s var(--ease);
+}
+.way:hover{padding-inline-start:8px}
+.way:first-child{border-top:1px solid rgba(255,255,255,.09)}
+.way-ico{
+  width:42px;height:42px;border-radius:50%;flex-shrink:0;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.07);color:#9dc0e0;
+  transition:background-color .35s,color .35s;
+}
+.way:hover .way-ico{background:rgba(255,255,255,.14);color:#fff}
+.way-text strong{display:block;font-size:1.04rem;font-weight:600;letter-spacing:.01em}
+.way-text span{font-size:.86rem;color:#8b9cad}
+.contact-note{font-size:.9rem;color:#8b9cad;line-height:1.7;max-width:430px}
+
+.form-card{
+  background:var(--white);
+  border-radius:var(--r-lg);
+  padding:clamp(28px,3.4vw,42px);
+  box-shadow:var(--shadow-lg);
+}
+.form-card h3{font-size:var(--step-2);margin-bottom:8px;font-weight:500}
+.form-card .sub{color:var(--ink-3);font-size:.95rem;font-weight:300;margin-bottom:28px}
+.field{margin-bottom:18px}
+.field label{
+  display:block;font-size:.85rem;font-weight:600;color:var(--ink-2);
+  margin-bottom:7px;letter-spacing:.01em;
+}
+.field input,.field select,.field textarea{
+  width:100%;font-family:inherit;font-size:1rem;color:var(--ink);
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:var(--r-sm);
+  background:var(--paper);
+  transition:border-color .3s,background-color .3s,box-shadow .3s;
+  min-height:52px;
+}
+.field textarea{min-height:96px;resize:vertical;line-height:1.6}
+.field select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7885' stroke-width='2.4'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 16px center;padding-inline-start:44px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--brand);background:var(--white);
+  box-shadow:0 0 0 3px rgba(30,77,123,.10);
+}
+.field input::placeholder,.field textarea::placeholder{color:#a9b2ba}
+.form-card .btn{width:100%;margin-top:8px}
+.form-foot{
+  text-align:center;font-size:.82rem;color:var(--ink-3);
+  margin-top:16px;line-height:1.6;
+}
+
+/* ---------- תחתית ---------- */
+.site-footer{
+  background:var(--ink);color:#7d8b99;
+  padding:0 0 clamp(30px,4vw,44px);
+  font-size:.88rem;
+}
+.footer-top{
+  border-top:1px solid rgba(255,255,255,.09);
+  padding-top:clamp(30px,4vw,44px);
+  display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;
+  margin-bottom:26px;
+}
+.footer-top img{height:46px;width:auto;filter:brightness(0) invert(1);opacity:.85}
+.footer-nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+.footer-nav a{text-decoration:none;color:#9aa8b6;transition:color .3s}
+.footer-nav a:hover{color:#fff}
+.footer-bottom{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;font-size:.83rem}
+.disclaimer{
+  margin-top:20px;padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.07);
+  font-size:.78rem;line-height:1.7;color:#69757f;max-width:760px;
+}
+
+/* ---------- פעולה צפה ---------- */
+.wa-float{
+  position:fixed;bottom:26px;inset-inline-start:26px;z-index:90;
+  width:56px;height:56px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--white);color:var(--wa);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  transition:transform .4s var(--ease),background-color .3s,color .3s;
+}
+.wa-float:hover{transform:scale(1.07);background:var(--wa);color:#fff;border-color:var(--wa)}
+
+.mobile-bar{
+  display:none;
+  position:fixed;inset-inline:0;bottom:0;z-index:95;
+  background:rgba(251,250,248,.94);
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+  border-top:1px solid var(--line);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  gap:10px;
+}
+.mobile-bar a{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:50px;border-radius:100px;
+  font-size:.97rem;font-weight:600;text-decoration:none;
+}
+.mobile-bar .mb-call{background:var(--brand);color:#fff}
+.mobile-bar .mb-wa{background:var(--white);color:var(--ink);border:1px solid var(--line)}
+.mobile-bar .mb-wa svg{color:var(--wa)}
+
+/* ---------- אנימציית גלילה ---------- */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none}
+}
+
+/* ---------- רספונסיביות ---------- */
+@media (max-width:1000px){
+  .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about-grid{grid-template-columns:1fr}
+  .about-figure{position:static;max-width:330px}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  :root{--nav-h:68px}
+  .nav-links,.nav-cta{display:none}
+  .nav-toggle{display:flex}
+  .brand img{height:44px}
+  .scrolled .brand img{height:40px}
+  .wa-float{display:none}
+  .mobile-bar{display:flex}
+  body{padding-bottom:74px}
+  .hero-notes{gap:12px 24px}
+}
+@media (max-width:560px){
+  .wrap{width:min(1180px,100% - 2rem)}
+  .hero h1{letter-spacing:-.015em}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .hero-notes{flex-direction:column;gap:11px}
+  .svc-grid{grid-template-columns:minmax(0,1fr);border-radius:var(--r)}
+  .step{padding-inline-start:60px}
+  .step-dot{width:41px;height:41px;font-size:.94rem}
+  .steps::before{inset-inline-start:20px}
+  .qa-btn{padding:22px 2px;gap:16px}
+  .footer-top{flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
+
 <body>
 
-<!-- ============ כותרת עליונה ============ -->
-<header>
-  <div class="container header-inner">
-    <a href="#" class="logo">
-      <!-- הלוגו נטען מ- assets/logo.png; אם הקובץ חסר, מוצג הטקסט החלופי -->
-      <img src="assets/logo.png" alt="משכנתאלה — ייעוץ משכנתאות" class="logo-img"
-           onload="document.getElementById('logoFallback').style.display='none'"
-           onerror="this.style.display='none'">
-      <span id="logoFallback" style="display:flex;align-items:center;gap:12px">
-        <span class="logo-mark">מ</span>
-        <span class="logo-text">
-          <strong>משכנתאלה</strong>
-          <span>חיים ג'נאח · ייעוץ משכנתאות</span>
-        </span>
-      </span>
+<a class="skip" href="#main">דילוג לתוכן המרכזי</a>
+
+<!-- ==================== כותרת ==================== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="משכנתאלה — לראש העמוד">
+      <img src="assets/logo.png" alt="משכנתאלה" width="200" height="52"
+           onerror="this.outerHTML='<span class=&quot;brand-fallback&quot;>משכנתאלה</span>'">
     </a>
-    <nav class="main-nav">
-      <a href="#services">שירותים</a>
-      <a href="#about">אודות</a>
-      <a href="#process">איך זה עובד</a>
-      <a href="#faq">שאלות נפוצות</a>
-      <a href="#contact">צור קשר</a>
+
+    <nav class="nav-links" aria-label="ניווט ראשי">
+      <a href="#services">במה אני עוזר</a>
+      <a href="#about">עליי</a>
+      <a href="#approach">איך אני עובד</a>
+      <a href="#process">התהליך</a>
+      <a href="#faq">שאלות</a>
     </nav>
-    <a class="header-cta wa-link" href="#">לייעוץ ראשוני חינם</a>
+
+    <a class="nav-cta" href="#contact">שיחת היכרות</a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="פתיחת תפריט">
+      <span></span>
+    </button>
   </div>
 </header>
 
-<!-- ============ אזור פתיחה ============ -->
-<div class="hero">
-  <div class="container hero-grid">
-    <div>
-      <img src="assets/logo.png" alt="משכנתאלה — ייעוץ משכנתאות" class="hero-logo"
-           onerror="this.style.display='none'">
-      <div class="hero-badge">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
-        יועץ משכנתאות מוסמך · ליווי אישי מא' ועד המפתח
-      </div>
-      <h1>המשכנתא הנכונה יכולה לחסוך לכם <span class="gold">מאות אלפי שקלים</span></h1>
+<div class="mobile-panel" id="mobilePanel">
+  <div class="wrap">
+    <a href="#services">במה אני עוזר</a>
+    <a href="#about">עליי</a>
+    <a href="#approach">איך אני עובד</a>
+    <a href="#process">התהליך</a>
+    <a href="#faq">שאלות</a>
+    <a class="btn btn-primary" href="#contact">לקביעת שיחת היכרות</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ==================== פתיחה ==================== -->
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow">חיים ג'נאח · ייעוץ משכנתאות</p>
+
+      <h1 id="heroTitle">משכנתא היא לא רק <em>ריבית</em>.</h1>
+
       <p class="lead">
-        הבנק עובד בשביל עצמו. אני עובד בשבילכם. ליווי אישי ומקצועי בבניית תמהיל המשכנתא,
-        ניהול משא ומתן מול כל הבנקים — עד שמקבלים את התנאים הטובים ביותר שאפשר.
+        היא ההחלטה הכלכלית שתחיו איתה עשרים שנה קדימה. אני יושב עם משפחות, מבין לעומק
+        מה באמת קורה אצלן, ורק אחר כך ניגש למספרים — כדי שתחתמו על משכנתא שאתם מבינים,
+        ולא על מה שהוצע לכם.
       </p>
-      <div class="hero-ctas">
-        <a class="btn btn-whatsapp wa-link" href="#">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.45-4.44 9.88-9.9 9.88M20.47 3.55A11.8 11.8 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.31-1.65a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.35"/></svg>
-          דברו איתי בוואטסאפ
+
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#contact">
+          לקביעת שיחת היכרות
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
         </a>
-        <a class="btn btn-outline" href="#contact">השאירו פרטים ואחזור אליכם</a>
+        <a class="btn btn-wa btn-lg wa-link" href="#">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.45-4.44 9.88-9.9 9.88M20.47 3.55A11.8 11.8 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.31-1.65a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.35"/></svg>
+          שליחת הודעה בוואטסאפ
+        </a>
       </div>
-      <div class="hero-trust">
-        <span>
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          פגישת היכרות ללא עלות
-        </span>
-        <span>
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          ללא התחייבות
-        </span>
-        <span>
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          זמינות מלאה גם אחרי סגירה
-        </span>
-      </div>
-    </div>
 
-    <div class="hero-photo-wrap">
-      <!-- כשתגיע התמונה: להחליף את התוכן ב- <img src="assets/advisor.jpg" alt="תמונת היועץ" style="width:100%;height:100%;object-fit:cover"> -->
-      <div class="hero-photo">
-        <svg class="placeholder-icon" width="110" height="110" viewBox="0 0 24 24" fill="none" stroke="#8fa7c4" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-      </div>
-      <div class="hero-photo-caption">
-        <strong>חיים ג'נאח</strong>
-        <span>יועץ משכנתאות מוסמך</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ============ פס נתונים ============ -->
-<div class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><strong><em>15</em>+</strong><span>שנות ניסיון</span></div>
-    <div class="stat"><strong><em>500</em>+</strong><span>משפחות שלוו בהצלחה</span></div>
-    <div class="stat"><strong>מיליוני ₪</strong><span>נחסכו ללקוחות</span></div>
-    <div class="stat"><strong><em>100%</em></strong><span>ליווי אישי עד המפתח</span></div>
-  </div>
-</div>
-
-<!-- ============ שירותים ============ -->
-<section id="services">
-  <div class="container">
-    <h2 class="section-title">במה אני יכול לעזור לכם?</h2>
-    <div class="gold-line"></div>
-    <p class="section-sub">כל שירותי ייעוץ המשכנתא במקום אחד — מותאם בדיוק למצב ולצרכים שלכם</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>
-        </div>
-        <h3>משכנתא לדירה ראשונה</h3>
-        <p>ליווי מלא לזוגות צעירים ורוכשים ראשונים — בניית תמהיל חכם, אישור עקרוני ומשא ומתן מול הבנקים.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2"><path d="M21 12a9 9 0 11-2.6-6.4"/><path d="M21 3v6h-6"/></svg>
-        </div>
-        <h3>מיחזור משכנתא</h3>
-        <p>בדיקה חינמית האם המשכנתא הקיימת שלכם יקרה מדי — במקרים רבים אפשר לחסוך עשרות ומאות אלפי שקלים.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 13h18"/></svg>
-        </div>
-        <h3>משכנתא לכל מטרה</h3>
-        <p>מינוף הנכס הקיים לצרכים נוספים — שיפוץ, עזרה לילדים, סגירת הלוואות יקרות או כל מטרה אחרת.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-4h6v4"/><path d="M9 12h.01M15 12h.01"/></svg>
-        </div>
-        <h3>משכנתא למשקיעים</h3>
-        <p>ליווי משקיעי נדל"ן — מימון חכם לדירה שנייה ומעלה, תכנון מס ותזרים שממקסם את התשואה.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ אודות ============ -->
-<section id="about" class="about">
-  <div class="container about-grid">
-    <!-- כשתגיע התמונה: להחליף את התוכן ב- <img src="assets/advisor.jpg" alt="תמונת היועץ" style="width:100%;height:100%;object-fit:cover"> -->
-    <div class="about-photo">
-      <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#9db1c9" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-    </div>
-    <div>
-      <h2>נעים להכיר, חיים ג'נאח</h2>
-      <div class="role">יועץ משכנתאות מוסמך</div>
-      <p>
-        [כאן יבוא סיפור אישי קצר — למשל: אחרי X שנים במערכת הבנקאית, הבנתי שהלקוח שמגיע לבנק לבד
-        משלם יותר. הקמתי את העסק כדי לעמוד בצד של המשפחות — ולא בצד של הבנק.]
-      </p>
-      <p>
-        משכנתא היא העסקה הפיננסית הגדולה בחיים של רוב האנשים. ההבדל בין תמהיל טוב לתמהיל בינוני
-        יכול להגיע למאות אלפי שקלים לאורך חיי ההלוואה — ואת ההבדל הזה אני כאן כדי להשיג בשבילכם.
-      </p>
-      <ul>
+      <ul class="hero-notes">
         <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          היכרות עמוקה עם מסלולי כל הבנקים ותנאי השוק העדכניים
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          השיחה הראשונה בלי עלות
         </li>
         <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          משא ומתן מול מספר בנקים במקביל — הבנקים מתחרים עליכם
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          בלי התחייבות ובלי לחץ להחליט במקום
         </li>
         <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          שקיפות מלאה: מסבירים כל מסלול, כל ריבית וכל החלטה בגובה העיניים
-        </li>
-        <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-          ליווי צמוד עד החתימה — ולא נעלמים גם אחריה
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          אענה על שאלות גם אם בסוף לא נעבוד יחד
         </li>
       </ul>
-      <a class="btn btn-whatsapp wa-link" href="#">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.45-4.44 9.88-9.9 9.88M20.47 3.55A11.8 11.8 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.31-1.65a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.35"/></svg>
-        בואו נדבר — ללא התחייבות
-      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ תהליך העבודה ============ -->
-<section id="process">
-  <div class="container">
-    <h2 class="section-title">איך זה עובד?</h2>
-    <div class="gold-line"></div>
-    <p class="section-sub">תהליך פשוט ושקוף בארבעה שלבים — אתם רגועים, אני עובד</p>
-    <div class="process-grid">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>שיחת היכרות חינם</h3>
-        <p>נכיר, נבין את הצרכים והיכולות שלכם, ונבדוק מה אפשר להשיג. ללא עלות וללא התחייבות.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>בניית תמהיל מותאם</h3>
-        <p>בניית תמהיל משכנתא חכם שמותאם בדיוק לתזרים, לתוכניות ולעתיד שלכם — לא תבנית גנרית.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>מכרז בין הבנקים</h3>
-        <p>אני פונה לכל הבנקים במקביל ומנהל משא ומתן עד שמשיגים את הריביות והתנאים הטובים ביותר.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h3>ליווי עד המפתח</h3>
-        <p>ליווי מלא בחתימות, בביורוקרטיה ובכל שלב — עד שהכסף עובר והמפתח אצלכם ביד.</p>
-      </div>
+<!-- ==================== אמירה ==================== -->
+<div class="statement">
+  <div class="wrap">
+    <p class="reveal">
+      &ldquo;אני לא יודע להגיד לכם מה נכון לעשות לפני שראיתי את התמונה המלאה.
+      זה לוקח לי קצת יותר זמן מאחרים — וזה בדיוק מה שעושה את ההבדל.&rdquo;
+      <span class="sig">חיים</span>
+    </p>
+  </div>
+</div>
+
+<!-- ==================== שירותים ==================== -->
+<section class="services" id="services" aria-labelledby="servicesTitle">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">במה אני עוזר</p>
+      <h2 id="servicesTitle">כל מצב מגיע עם שאלות אחרות</h2>
+      <p>לכל אחד מהמצבים האלה יש היגיון משלו, סיכונים משלו ודברים שכדאי לדעת מראש. הנה מה שאני עושה בכל אחד מהם.</p>
+    </div>
+
+    <div class="svc-grid reveal">
+
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.2L12 3l9 7.2"/><path d="M5.4 9v11.1h13.2V9"/><path d="M9.6 20.1v-5.4h4.8v5.4"/></svg>
+        </div>
+        <h3>משכנתא לרכישת דירה</h3>
+        <p>הפעם הראשונה היא גם המבלבלת ביותר. נתחיל מלהבין כמה אתם באמת יכולים לקחת — לא כמה הבנק מוכן לתת — ונבנה מזה החזר חודשי שלא יחנוק אתכם בשנים העמוסות.</p>
+      </article>
+
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 11-2.5-6"/><path d="M20.5 3.5v5h-5"/></svg>
+        </div>
+        <h3>מיחזור משכנתא</h3>
+        <p>המשכנתא שלקחתם לפני כמה שנים נבנתה סביב חיים אחרים. נבדוק אם יש היום מה לשפר, כמה זה שווה בפועל, ומה זה עולה. ואם לא כדאי — אגיד לכם שלא כדאי.</p>
+      </article>
+
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-5.5 7 5.5v11"/><path d="M12 4.5V2"/><path d="M9.5 12.5h5"/><path d="M9.5 16.5h5"/></svg>
+        </div>
+        <h3>בנייה עצמית</h3>
+        <p>בבנייה הכסף לא מגיע בבת אחת אלא לפי קצב ההתקדמות באתר. התכנון כאן הוא של תזרים: שהכסף יהיה שם בדיוק כשהקבלן צריך אותו, ושלא תיתקעו באמצע.</p>
+      </article>
+
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10"/><path d="M4 11h10"/><path d="M4 16h6"/><path d="M17.5 5.5v13"/><path d="M14.5 15.5l3 3 3-3"/></svg>
+        </div>
+        <h3>איחוד הלוואות</h3>
+        <p>כשיש חמישה חיובים קטנים שמצטברים לסכום שקשה לעקוב אחריו, קשה גם לראות את התמונה. נבדוק אם אפשר לרכז אותם למקום אחד ברור — ומה המחיר האמיתי של המהלך.</p>
+      </article>
+
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="7"/><path d="M15.6 15.6L21 21"/><path d="M7.5 10.5h6"/><path d="M10.5 7.5v6"/></svg>
+        </div>
+        <h3>בדיקת תמהיל</h3>
+        <p>יש לכם הצעה ביד ואתם רוצים דעה שנייה לפני שחותמים. אעבור עליה שורה־שורה ואסביר מה כתוב שם באמת — איפה זה טוב, איפה זה מסוכן, ומה הייתי משנה.</p>
+      </article>
+
+      <article class="svc">
+        <div class="svc-ico" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M5 20V9.5"/><path d="M19 20V9.5"/><path d="M9.5 20v-6h5v6"/><path d="M2.5 9.5L12 4l9.5 5.5"/></svg>
+        </div>
+        <h3>ליווי מול הבנק</h3>
+        <p>רוב האנשים לא נהנים להתמקח, ובטח לא מול בנקאי שעושה את זה כל יום. אני מנהל את המשא ומתן במקומכם, ואתם מקבלים עדכון אחרי כל שלב בשפה ברורה.</p>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- ============ המלצות ============ -->
-<section class="testimonials">
-  <div class="container">
-    <h2 class="section-title">משפחות מספרות</h2>
-    <div class="gold-line"></div>
-    <p class="section-sub">[כאן ייכנסו המלצות אמיתיות של לקוחות — אלו דוגמאות זמניות]</p>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p>"הגענו אחרי שקיבלנו הצעה מהבנק וחשבנו שזה מה שיש. בסוף התהליך הריבית ירדה משמעותית והתמהיל נבנה מחדש. חסכנו מאות שקלים בכל חודש."</p>
-        <footer>
-          <div class="testi-avatar">מ</div>
-          <div><strong>משפחת [שם]</strong><span>רכישת דירה ראשונה</span></div>
-        </footer>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p>"לא האמנו שמיחזור יכול לחסוך כל כך הרבה. הליווי היה אישי וסבלני, כל שאלה נענתה, וההרגשה הייתה שיש מישהו שבאמת בצד שלנו מול הבנק."</p>
-        <footer>
-          <div class="testi-avatar">א</div>
-          <div><strong>משפחת [שם]</strong><span>מיחזור משכנתא</span></div>
-        </footer>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p>"זמין בכל שעה, מסביר הכל בגובה העיניים, ורואים שהוא מכיר את הבנקים מבפנים. ממליצים בחום לכל מי שלוקח משכנתא — אל תלכו לבנק לבד."</p>
-        <footer>
-          <div class="testi-avatar">ד</div>
-          <div><strong>משפחת [שם]</strong><span>משכנתא למשקיעים</span></div>
-        </footer>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ==================== אודות ==================== -->
+<section class="about" id="about" aria-labelledby="aboutTitle">
+  <div class="wrap about-grid">
 
-<!-- ============ שאלות נפוצות ============ -->
-<section id="faq">
-  <div class="container">
-    <h2 class="section-title">שאלות נפוצות</h2>
-    <div class="gold-line"></div>
-    <p class="section-sub">כל מה שרציתם לדעת לפני שמתחילים</p>
-    <div class="faq-list">
-      <details>
-        <summary>כמה עולה ייעוץ משכנתא?</summary>
-        <p>שיחת ההיכרות הראשונה היא ללא עלות וללא התחייבות. שכר הטרחה נקבע מראש בשקיפות מלאה — וברוב המוחלט של המקרים, החיסכון שמושג בתהליך גבוה פי כמה וכמה מעלות הייעוץ.</p>
-      </details>
-      <details>
-        <summary>למה לא פשוט ללכת לבנק לבד?</summary>
-        <p>הבנקאי מייצג את הבנק — לא אתכם. יועץ משכנתאות עצמאי משווה בין כל הבנקים במקביל, מכיר את המסלולים והריביות "מבפנים", ויוצר תחרות אמיתית על התיק שלכם. התוצאה: תנאים שכמעט בלתי אפשרי להשיג לבד.</p>
-      </details>
-      <details>
-        <summary>מתי כדאי לבדוק מיחזור משכנתא?</summary>
-        <p>בכל פעם שהריביות במשק משתנות, כשההכנסה שלכם השתנתה, או אם עברו כמה שנים מלקיחת המשכנתא. הבדיקה אצלי חינמית — אם אין כדאיות למיחזור, אגיד לכם את זה ביושר.</p>
-      </details>
-      <details>
-        <summary>כמה זמן לוקח התהליך?</summary>
-        <p>תלוי בסוג העסקה, אבל בדרך כלל בין שבועיים לחודש מרגע שמתחילים ועד אישור סופי. אני מלווה אתכם בכל שלב ודואג שהתהליך יתקדם בלי עיכובים מיותרים.</p>
-      </details>
-      <details>
-        <summary>אנחנו לא בטוחים שנקבל אישור בכלל. שווה לפנות?</summary>
-        <p>בהחלט. חלק גדול מהעבודה שלי הוא בדיוק במקרים המורכבים — הכנסות לא שגרתיות, עצמאים, דירוג אשראי בעייתי. בשיחת ההיכרות נבין יחד מה המצב ומה אפשר לעשות כדי להגיע לאישור.</p>
-      </details>
-    </div>
-  </div>
-</section>
+    <figure class="about-figure reveal">
+      <!-- כשיגיע קובץ assets/portrait.jpg הוא יופיע כאן אוטומטית.
+           עד אז הפריט כולו מוסר והטקסט נפרס על מלוא הרוחב. -->
+      <img class="portrait" src="assets/portrait.jpg" alt="חיים ג'נאח" width="340" height="425"
+           onerror="var g=this.closest('.about-grid');this.closest('figure').remove();g.classList.add('solo')">
+      <figcaption>
+        <strong>חיים ג'נאח</strong>
+        <span>ייעוץ משכנתאות · פעילות בכל הארץ</span>
+      </figcaption>
+    </figure>
 
-<!-- ============ יצירת קשר ============ -->
-<section id="contact" class="contact">
-  <div class="container contact-grid">
-    <div class="contact-info">
-      <h2>מוכנים לחסוך במשכנתא?</h2>
+    <div class="about-body reveal">
+      <p class="eyebrow">עליי</p>
+      <h2 id="aboutTitle">נעים להכיר. אני חיים.</h2>
+
       <p>
-        השאירו פרטים או שלחו הודעה בוואטסאפ — ואחזור אליכם תוך יום עסקים לשיחת היכרות קצרה,
-        ללא עלות וללא התחייבות.
+        אני אדם יסודי. זה נשמע כמו משפט שכותבים בקורות חיים, אבל אצלי זה פשוט איך שאני בנוי —
+        אני לא מסוגל להמליץ על משהו לפני שהבנתי אותו עד הסוף, ובטח לא כשמדובר בכסף של מישהו אחר.
       </p>
-      <div class="contact-line">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.9.6 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.9.5 2.8.6a2 2 0 011.8 2.1z"/></svg>
-        </div>
-        <a href="tel:+972528756618" class="phone-link">052-8756618</a>
-      </div>
-      <div class="contact-line">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
-        </div>
-        <a href="mailto:haimg4336@gmail.com" class="email-link">haimg4336@gmail.com</a>
-      </div>
-      <div class="contact-line">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a13b" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <span>פעילות בכל הארץ · פגישות פרונטליות או בזום</span>
+
+      <p>
+        כשמשפחה מגיעה אליי, הדבר הראשון שאני מבקש הוא לא תלושי שכר. אני רוצה לדעת כמה זמן אתם
+        מתכננים לגור בדירה הזאת. אם מתוכננים עוד ילדים. מה קורה אם אחד מכם ירצה להחליף עבודה
+        בעוד שלוש שנים. <strong>משכנתא נראית כמו מספר, אבל היא בעצם החלטה על איך המשפחה שלכם
+        תיראה כלכלית בשני העשורים הבאים</strong> — ואי אפשר לקבל אותה מתוך טבלה בלבד.
+      </p>
+
+      <blockquote class="pullquote">
+        שני זוגות עם אותה הכנסה ואותו מחיר דירה יכולים לצאת ממני עם שתי משכנתאות שונות לגמרי.
+        זה לא באג. זה כל הרעיון.
+      </blockquote>
+
+      <p>
+        אני לא עובד לפי תבניות. אין אצלי &ldquo;התמהיל שאני נותן לזוגות צעירים&rdquo;, כי אין דבר כזה.
+        אני בונה כמה חלופות, מציב אותן אחת מול השנייה, ומראה לכם בדיוק מה ההבדל ביניהן — בכסף,
+        בסיכון ובגמישות.
+      </p>
+
+      <p>
+        ומה שהכי חשוב לי: <strong>שתבינו</strong>. אני לא אשלח לכם קובץ ואגיד &ldquo;תחתמו&rdquo;.
+        אני אשב ואסביר כל שורה — למה בחרתי מסלול אחד ולא אחר, מה קורה אם הריבית זזה, איפה נמצא
+        הסיכון ואיפה ההזדמנות. ואם לא היה ברור, נעבור על זה שוב. לקוח שמבין את המשכנתא שלו הוא
+        לקוח רגוע, וגם כזה שיידע לקבל החלטות טובות בהמשך הדרך — גם בלעדיי.
+      </p>
+
+      <p>
+        אני מעדיף לעבוד עם פחות משפחות ולהכיר כל אחת מהן באמת, מאשר להריץ הרבה תיקים במקביל.
+        אף אחד אצלי הוא לא &ldquo;עוד תיק&rdquo;, וזה לא סיסמה — זו פשוט הסיבה שאני עובד ככה.
+      </p>
+
+      <p>
+        ואם אחרי השיחה הראשונה תחליטו שאתם רוצים להמשיך לבד או עם מישהו אחר, זה בסדר גמור.
+        עדיין תצאו ממנה יודעים יותר ממה שנכנסתם.
+      </p>
+
+      <div class="about-sign">
+        <strong>חיים ג'נאח</strong>
+        <span>ייעוץ משכנתאות · פעילות בכל הארץ</span>
       </div>
     </div>
 
-    <form class="lead-form" id="leadForm">
-      <h3>השאירו פרטים ואחזור אליכם</h3>
-      <div class="form-sub">מענה תוך יום עסקים · ללא התחייבות</div>
-      <div class="form-row">
-        <label for="name">שם מלא</label>
-        <input type="text" id="name" name="name" required placeholder="ישראל ישראלי">
+  </div>
+</section>
+
+<!-- ==================== גישה ==================== -->
+<section class="approach" id="approach" aria-labelledby="approachTitle">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow center">איך אני עובד</p>
+      <h2 id="approachTitle">שש החלטות שאני מקפיד עליהן</h2>
+      <p>לא יתרונות, לא הבטחות. פשוט הדרך שבה אני מתנהל מול כל משפחה שמגיעה אליי.</p>
+    </div>
+
+    <div class="appr-grid">
+      <article class="appr reveal">
+        <span class="appr-num">01</span>
+        <h3>קודם אתם, אחר כך המספרים</h3>
+        <p>לפני שאני פותח קובץ אחד, אני רוצה להבין מי אתם ואיך נראים החיים שלכם. תמהיל טוב נבנה סביב משפחה, לא סביב שורה בטבלה.</p>
+      </article>
+
+      <article class="appr reveal">
+        <span class="appr-num">02</span>
+        <h3>כל המלצה מגיעה עם הסבר</h3>
+        <p>לא תשמעו ממני &ldquo;תסמכו עליי&rdquo;. תשמעו למה בחרתי כך, מה החלופה שנפסלה ולמה, ומה הסיכון שלקחנו במודע. אם זה לא התיישב לכם — נעצור ונחזור על זה.</p>
+      </article>
+
+      <article class="appr reveal">
+        <span class="appr-num">03</span>
+        <h3>תמיד יותר מאפשרות אחת</h3>
+        <p>אני לא מביא תמהיל אחד ומקווה שתאשרו. אני מביא כמה, עם השוואה ברורה ביניהם, כדי שההחלטה תהיה שלכם ולא שלי.</p>
+      </article>
+
+      <article class="appr reveal">
+        <span class="appr-num">04</span>
+        <h3>אני חושב על השנה השביעית</h3>
+        <p>קל להוריד את ההחזר של החודש הראשון. השאלה האמיתית היא מה קורה כשהריבית זזה, כשנולד ילד, או כשתרצו למכור ולעבור. שם נמצא ההבדל.</p>
+      </article>
+
+      <article class="appr reveal">
+        <span class="appr-num">05</span>
+        <h3>שאלות באמצע הדרך זה חלק מהעניין</h3>
+        <p>לא תרגישו שאתם מטריחים. אם בחודש השלישי משהו לא ברור — תרימו טלפון. עדיף שתשאלו מאה שאלות מאשר שתחתמו על משהו שלא הבנתם.</p>
+      </article>
+
+      <article class="appr reveal">
+        <span class="appr-num">06</span>
+        <h3>אני נשאר עד שהתהליך נגמר</h3>
+        <p>לא עד החתימה — עד שהכסף עבר, המסמכים סגורים והכול מאחוריכם. ואחרי זה אני עדיין כאן, כי משכנתא היא לא אירוע חד־פעמי.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== תהליך ==================== -->
+<section class="process" id="process" aria-labelledby="processTitle">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow center">התהליך</p>
+      <h2 id="processTitle">מה בדיוק הולך לקרות</h2>
+      <p>בלי הפתעות ובלי שלבים מעורפלים. ככה זה נראה מהשיחה הראשונה ועד שהכול סגור.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step-dot" aria-hidden="true">1</span>
+        <h3>שיחת היכרות</h3>
+        <p>נדבר כחצי שעה. תספרו לי איפה אתם עומדים, אני אשאל כמה שאלות ואענה על שלכם. בסוף השיחה תדעו אם יש כאן משהו לעשות ומה הצעד הבא.</p>
+        <span class="meta">ללא עלות · ללא התחייבות</span>
+      </li>
+
+      <li class="step reveal">
+        <span class="step-dot" aria-hidden="true">2</span>
+        <h3>אוספים את התמונה המלאה</h3>
+        <p>תלושים, דוח נתוני אשראי, התחייבויות קיימות, הון עצמי. אני צריך לראות את הכול לפני שאני אומר מילה על מסלולים — ואסביר לכם למה כל מסמך נחוץ.</p>
+      </li>
+
+      <li class="step reveal">
+        <span class="step-dot" aria-hidden="true">3</span>
+        <h3>בונים כמה חלופות</h3>
+        <p>אני בונה מספר תמהילים אפשריים ומציג אותם זה מול זה: כמה תשלמו בכל אחד, מה קורה בכל אחד אם הריבית עולה, ואיפה יש גמישות. נבחר יחד.</p>
+      </li>
+
+      <li class="step reveal">
+        <span class="step-dot" aria-hidden="true">4</span>
+        <h3>יוצאים לבנקים</h3>
+        <p>אני פונה לבנקים, משווה את מה שחוזר ומנהל את המשא ומתן. אתם מקבלים עדכון אחרי כל סבב — כולל הצעות שדחיתי ולמה דחיתי אותן.</p>
+      </li>
+
+      <li class="step reveal">
+        <span class="step-dot" aria-hidden="true">5</span>
+        <h3>חתימה, ומה שאחריה</h3>
+        <p>ליווי בכל הניירת מול הבנק ועורכי הדין, עד שהכסף עובר. ואחרי שהכול נסגר — הדלת נשארת פתוחה לשאלות, גם בעוד שנתיים.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ==================== שאלות ==================== -->
+<section class="faq" id="faq" aria-labelledby="faqTitle">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow center">שאלות</p>
+      <h2 id="faqTitle">מה שאנשים שואלים לפני שהם פונים</h2>
+      <p>אלה השאלות שחוזרות אצלי בשיחות הראשונות. אם משהו שלכם לא מופיע כאן — פשוט תשאלו.</p>
+    </div>
+
+    <div class="faq-list reveal" id="faqList">
+
+      <div class="qa">
+        <button class="qa-btn" aria-expanded="false">
+          <span>עוד לא מצאנו דירה. מוקדם מדי לדבר איתך?</span>
+          <span class="qa-sign" aria-hidden="true"></span>
+        </button>
+        <div class="qa-panel"><div><p>
+          זה בעצם הזמן הכי טוב. כשאתם יודעים מראש כמה אתם באמת יכולים לקחת ומה ההחזר שנוח לכם,
+          אתם מחפשים דירה בטווח הנכון ולא מתאהבים במשהו שיילחץ אתכם אחר כך. גם המשא ומתן מול המוכר
+          נראה אחרת כשאתם יודעים בדיוק על מה אתם עומדים.
+        </p></div></div>
       </div>
-      <div class="form-row">
+
+      <div class="qa">
+        <button class="qa-btn" aria-expanded="false">
+          <span>כמה זה עולה לי?</span>
+          <span class="qa-sign" aria-hidden="true"></span>
+        </button>
+        <div class="qa-panel"><div><p>
+          שיחת ההיכרות היא ללא עלות. אם נחליט להמשיך יחד, אגיד לכם את שכר הטרחה המדויק מראש,
+          לפני שהתחלנו לעבוד — סכום אחד, בלי תוספות שצצות באמצע. אני מעדיף שתדעו בדיוק על מה
+          אתם מסכימים לפני שאתם מסכימים.
+        </p></div></div>
+      </div>
+
+      <div class="qa">
+        <button class="qa-btn" aria-expanded="false">
+          <span>אנחנו לא מבינים כלום במשכנתאות. זה יהיה מביך?</span>
+          <span class="qa-sign" aria-hidden="true"></span>
+        </button>
+        <div class="qa-panel"><div><p>
+          רוב האנשים שמגיעים אליי לא מבינים במשכנתאות, וזה לגמרי סביר — אף אחד לא אמור להיות מומחה
+          בעסקה שהוא עושה פעם או פעמיים בחיים. אני לא משתמש במונחים בלי להסביר אותם, ואין אצלי
+          שאלה בסיסית מדי. אם משהו לא ברור, זו לא בעיה שלכם אלא סימן שלא הסברתי מספיק טוב.
+        </p></div></div>
+      </div>
+
+      <div class="qa">
+        <button class="qa-btn" aria-expanded="false">
+          <span>הבנק כבר נתן לנו אישור עקרוני. נשאר בכלל מה לעשות?</span>
+          <span class="qa-sign" aria-hidden="true"></span>
+        </button>
+        <div class="qa-panel"><div><p>
+          אישור עקרוני אומר שהבנק מוכן לתת לכם כסף. הוא לא אומר שהתנאים שהוצעו לכם הם הטובים
+          ביותר שאפשר להשיג, ובעיקר לא שהתמהיל בתוכו מתאים למה שאתם צריכים. שווה לפחות לעבור עליו
+          יחד לפני שחותמים — לפעמים אין מה לשנות, ולפעמים ההבדל משמעותי מאוד.
+        </p></div></div>
+      </div>
+
+      <div class="qa">
+        <button class="qa-btn" aria-expanded="false">
+          <span>אנחנו עצמאים וההכנסה שלנו לא קבועה. זו בעיה?</span>
+          <span class="qa-sign" aria-hidden="true"></span>
+        </button>
+        <div class="qa-panel"><div><p>
+          זה לא פוסל אתכם, אבל זה כן דורש הצגה נכונה של התמונה ובחירת מסלולים שמשאירים לכם מרווח
+          נשימה בחודשים החלשים. בדיוק במקרים כאלה חשוב לא ללכת לפי תבנית סטנדרטית, אלא לבנות משהו
+          שמתאים לאיך שהכסף באמת נכנס אצלכם.
+        </p></div></div>
+      </div>
+
+      <div class="qa">
+        <button class="qa-btn" aria-expanded="false">
+          <span>אתה עובד עם בנק מסוים?</span>
+          <span class="qa-sign" aria-hidden="true"></span>
+        </button>
+        <div class="qa-panel"><div><p>
+          לא. אני פונה לכמה בנקים ומשווה ביניהם, וההמלצה שלי נקבעת לפי מה שיצא הכי טוב עבורכם.
+          אם בסוף התשובה היא שדווקא ההצעה שכבר יש לכם ביד היא הטובה ביותר — גם את זה אגיד לכם.
+        </p></div></div>
+      </div>
+
+      <div class="qa">
+        <button class="qa-btn" aria-expanded="false">
+          <span>כמה זמן כל התהליך לוקח?</span>
+          <span class="qa-sign" aria-hidden="true"></span>
+        </button>
+        <div class="qa-panel"><div><p>
+          זה משתנה לפי סוג העסקה ולפי כמה מהר מתקבלים המסמכים, אבל בגדול מדובר בכמה שבועות מרגע
+          שיש בידיי את התמונה המלאה ועד אישור סופי. אני אגיד לכם מראש מה לוח הזמנים הצפוי במקרה
+          שלכם, ואעדכן אם משהו זז.
+        </p></div></div>
+      </div>
+
+      <div class="qa">
+        <button class="qa-btn" aria-expanded="false">
+          <span>מה קורה אם בסוף נחליט לא לעבוד איתך?</span>
+          <span class="qa-sign" aria-hidden="true"></span>
+        </button>
+        <div class="qa-panel"><div><p>
+          אז לא נעבוד יחד, וזה בסדר. השיחה הראשונה היא בדיוק בשביל זה — לבדוק אם יש כאן התאמה.
+          לא תשמעו ממני לחץ להחליט על המקום, ולא אתקשר שוב ושוב. אם תרצו לחזור בעוד חודש או בעוד
+          שנה, אשמח.
+        </p></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== יצירת קשר ==================== -->
+<section class="contact" id="contact" aria-labelledby="contactTitle">
+  <div class="wrap contact-grid">
+
+    <div class="reveal">
+      <p class="eyebrow">יצירת קשר</p>
+      <h2 id="contactTitle">בואו נדבר חצי שעה</h2>
+      <p class="contact-intro">
+        בלי מצגת ובלי טפסים ארוכים. תספרו לי איפה אתם עומדים, ואני אגיד לכם בכנות
+        אם יש כאן משהו שכדאי לעשות.
+      </p>
+
+      <div class="ways">
+        <a class="way" href="tel:+972528756618">
+          <span class="way-ico" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.9.6 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.9.5 2.8.6a2 2 0 011.8 2.1z"/></svg>
+          </span>
+          <span class="way-text">
+            <strong>052-875-6618</strong>
+            <span>אפשר גם פשוט להתקשר</span>
+          </span>
+        </a>
+
+        <a class="way wa-link" href="#">
+          <span class="way-ico" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.45-4.44 9.88-9.9 9.88M20.47 3.55A11.8 11.8 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.31-1.65a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.35"/></svg>
+          </span>
+          <span class="way-text">
+            <strong>וואטסאפ</strong>
+            <span>כתבו מתי נוח לכם ואחזור אליכם</span>
+          </span>
+        </a>
+
+        <a class="way" href="mailto:haimg4336@gmail.com">
+          <span class="way-ico" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M21.5 6.5L12 13 2.5 6.5"/></svg>
+          </span>
+          <span class="way-text">
+            <strong>haimg4336@gmail.com</strong>
+            <span>למי שמעדיף לכתוב באריכות</span>
+          </span>
+        </a>
+      </div>
+
+      <p class="contact-note">
+        פעילות בכל הארץ — נפגשים פנים אל פנים או בזום, מה שנוח לכם.
+        אני משתדל לחזור לכל פנייה תוך יום עסקים.
+      </p>
+    </div>
+
+    <form class="form-card reveal" id="leadForm" novalidate>
+      <h3>או שתשאירו פרטים כאן</h3>
+      <p class="sub">אחזור אליכם לשיחה קצרה. אין רשימות תפוצה ואין הודעות שיווקיות.</p>
+
+      <div class="field">
+        <label for="name">איך קוראים לכם?</label>
+        <input type="text" id="name" name="name" autocomplete="name" required placeholder="שם מלא">
+      </div>
+
+      <div class="field">
         <label for="phone">טלפון</label>
-        <input type="tel" id="phone" name="phone" required placeholder="050-0000000">
+        <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required placeholder="050-0000000">
       </div>
-      <div class="form-row">
+
+      <div class="field">
         <label for="topic">במה מדובר?</label>
         <select id="topic" name="topic">
-          <option>משכנתא לדירה ראשונה</option>
+          <option>משכנתא לרכישת דירה</option>
           <option>מיחזור משכנתא</option>
-          <option>משכנתא לכל מטרה</option>
-          <option>משכנתא למשקיעים</option>
-          <option>אחר / לא בטוח</option>
+          <option>בנייה עצמית</option>
+          <option>איחוד הלוואות</option>
+          <option>בדיקת תמהיל קיים</option>
+          <option>ליווי מול הבנק</option>
+          <option>עדיין לא בטוח / משהו אחר</option>
         </select>
       </div>
-      <div class="form-row">
-        <label for="msg">הודעה (לא חובה)</label>
-        <textarea id="msg" name="msg" rows="3" placeholder="ספרו לי בקצרה על המצב שלכם..."></textarea>
+
+      <div class="field">
+        <label for="msg">רוצים להוסיף משהו? <span style="font-weight:400;color:var(--ink-3)">(לא חובה)</span></label>
+        <textarea id="msg" name="msg" rows="3" placeholder="כמה מילים על המצב שלכם, או מתי נוח שאחזור אליכם"></textarea>
       </div>
-      <button type="submit" class="btn form-submit">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.45-4.44 9.88-9.9 9.88M20.47 3.55A11.8 11.8 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.31-1.65a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.35"/></svg>
-        שליחה בוואטסאפ
+
+      <button type="submit" class="btn btn-primary btn-lg">
+        שליחה
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
       </button>
-      <div class="form-note">הפרטים נשלחים ישירות בוואטסאפ — בלי מאגרי מידע ובלי ספאם</div>
+
+      <p class="form-foot" id="formNote" aria-live="polite">
+        הפרטים נפתחים אצלכם כהודעת וואטסאפ מוכנה — אתם מחליטים אם לשלוח.
+      </p>
     </form>
+
   </div>
 </section>
 
-<!-- ============ תחתית ============ -->
+</main>
+
+<!-- ==================== תחתית ==================== -->
 <footer class="site-footer">
-  <div class="container">
-    <div><strong>משכנתאלה — חיים ג'נאח, ייעוץ משכנתאות</strong> © 2026 כל הזכויות שמורות</div>
-    <div class="disclaimer">
-      האמור באתר אינו מהווה ייעוץ פיננסי, המלצה או תחליף לייעוץ אישי המותאם לנתוני כל לקוח.
+  <div class="wrap">
+    <div class="footer-top">
+      <img src="assets/logo.png" alt="משכנתאלה" width="180" height="46" loading="lazy" onerror="this.remove()">
+      <nav class="footer-nav" aria-label="ניווט תחתון">
+        <a href="#services">במה אני עוזר</a>
+        <a href="#about">עליי</a>
+        <a href="#approach">איך אני עובד</a>
+        <a href="#process">התהליך</a>
+        <a href="#faq">שאלות</a>
+        <a href="#contact">יצירת קשר</a>
+      </nav>
     </div>
+
+    <div class="footer-bottom">
+      <span>חיים ג'נאח · ייעוץ משכנתאות</span>
+      <span>&copy; <span id="year">2026</span> כל הזכויות שמורות</span>
+    </div>
+
+    <p class="disclaimer">
+      התכנים באתר נועדו לתת רקע כללי בלבד ואינם מהווים ייעוץ פיננסי, המלצה או תחליף לבדיקה
+      אישית המותאמת לנתונים של כל לקוח. כל החלטה בנוגע למשכנתא צריכה להתקבל לאחר בחינה פרטנית.
+    </p>
   </div>
 </footer>
 
-<!-- ============ כפתור וואטסאפ צף ============ -->
-<a class="wa-float wa-link" href="#" aria-label="שיחה בוואטסאפ">
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.45-4.44 9.88-9.9 9.88M20.47 3.55A11.8 11.8 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.31-1.65a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.35"/></svg>
+<a class="wa-float wa-link" href="#" aria-label="פתיחת שיחה בוואטסאפ">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.45-4.44 9.88-9.9 9.88M20.47 3.55A11.8 11.8 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.31-1.65a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.35"/></svg>
 </a>
 
+<div class="mobile-bar">
+  <a class="mb-call" href="tel:+972528756618">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.9.6 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.9.5 2.8.6a2 2 0 011.8 2.1z"/></svg>
+    שיחה
+  </a>
+  <a class="mb-wa wa-link" href="#">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88 2.64 0 5.13 1.03 7 2.9a9.82 9.82 0 012.89 7c0 5.45-4.44 9.88-9.9 9.88M20.47 3.55A11.8 11.8 0 0012.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.31-1.65a11.9 11.9 0 005.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.35"/></svg>
+    וואטסאפ
+  </a>
+</div>
+
+<!-- ==================== נתונים מובנים ==================== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"ProfessionalService",
+      "@id":"https://oronlol.github.io/mashkantale/#business",
+      "name":"משכנתאלה — חיים ג'נאח, ייעוץ משכנתאות",
+      "alternateName":"משכנתאלה",
+      "url":"https://oronlol.github.io/mashkantale/",
+      "image":"https://oronlol.github.io/mashkantale/assets/logo.png",
+      "logo":"https://oronlol.github.io/mashkantale/assets/logo.png",
+      "description":"ייעוץ וליווי אישי בתהליך המשכנתא — בניית תמהיל מותאם, מיחזור, בנייה עצמית, איחוד הלוואות, בדיקת תמהיל קיים וליווי מול הבנקים.",
+      "telephone":"+972-52-875-6618",
+      "email":"haimg4336@gmail.com",
+      "priceRange":"$$",
+      "areaServed":{"@type":"Country","name":"ישראל"},
+      "availableLanguage":["he"],
+      "founder":{"@id":"https://oronlol.github.io/mashkantale/#person"},
+      "hasOfferCatalog":{
+        "@type":"OfferCatalog",
+        "name":"שירותי ייעוץ משכנתאות",
+        "itemListElement":[
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"משכנתא לרכישת דירה"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"מיחזור משכנתא"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"משכנתא לבנייה עצמית"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"איחוד הלוואות"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"בדיקת תמהיל משכנתא"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"ליווי מול הבנקים"}}
+        ]
+      }
+    },
+    {
+      "@type":"Person",
+      "@id":"https://oronlol.github.io/mashkantale/#person",
+      "name":"חיים ג'נאח",
+      "jobTitle":"יועץ משכנתאות",
+      "telephone":"+972-52-875-6618",
+      "email":"haimg4336@gmail.com",
+      "worksFor":{"@id":"https://oronlol.github.io/mashkantale/#business"}
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://oronlol.github.io/mashkantale/#website",
+      "url":"https://oronlol.github.io/mashkantale/",
+      "name":"משכנתאלה — חיים ג'נאח",
+      "inLanguage":"he-IL",
+      "publisher":{"@id":"https://oronlol.github.io/mashkantale/#business"}
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://oronlol.github.io/mashkantale/#faq",
+      "mainEntity":[
+        {"@type":"Question","name":"עוד לא מצאנו דירה. מוקדם מדי לדבר?","acceptedAnswer":{"@type":"Answer","text":"זה בעצם הזמן הכי טוב. כשיודעים מראש כמה אפשר לקחת ומה ההחזר שנוח, מחפשים דירה בטווח הנכון וגם המשא ומתן מול המוכר נראה אחרת."}},
+        {"@type":"Question","name":"כמה עולה ייעוץ משכנתא?","acceptedAnswer":{"@type":"Answer","text":"שיחת ההיכרות ללא עלות. אם ממשיכים יחד, שכר הטרחה נקבע ונאמר מראש כסכום אחד ברור, לפני תחילת העבודה."}},
+        {"@type":"Question","name":"אנחנו לא מבינים כלום במשכנתאות. זה בעיה?","acceptedAnswer":{"@type":"Answer","text":"לא. רוב האנשים לא מבינים במשכנתאות, וזה סביר לגמרי. כל מונח מוסבר, ואין שאלה בסיסית מדי."}},
+        {"@type":"Question","name":"הבנק כבר נתן אישור עקרוני. נשאר מה לעשות?","acceptedAnswer":{"@type":"Answer","text":"אישור עקרוני אומר שהבנק מוכן לתת כסף, לא שהתנאים הם הטובים ביותר ולא שהתמהיל מתאים לצרכים. שווה לעבור עליו לפני החתימה."}},
+        {"@type":"Question","name":"אנחנו עצמאים וההכנסה לא קבועה. זו בעיה?","acceptedAnswer":{"@type":"Answer","text":"זה לא פוסל, אבל דורש הצגה נכונה של התמונה ובחירת מסלולים שמשאירים מרווח נשימה בחודשים החלשים."}},
+        {"@type":"Question","name":"אתה עובד עם בנק מסוים?","acceptedAnswer":{"@type":"Answer","text":"לא. הפנייה היא לכמה בנקים והשוואה ביניהם, וההמלצה נקבעת לפי מה שיצא הטוב ביותר עבור הלקוח."}},
+        {"@type":"Question","name":"כמה זמן התהליך לוקח?","acceptedAnswer":{"@type":"Answer","text":"משתנה לפי סוג העסקה וקצב קבלת המסמכים, בדרך כלל כמה שבועות מרגע שיש תמונה מלאה ועד אישור סופי."}},
+        {"@type":"Question","name":"מה קורה אם נחליט לא להמשיך?","acceptedAnswer":{"@type":"Answer","text":"זה בסדר גמור. השיחה הראשונה נועדה לבדוק התאמה, ואין לחץ להחליט במקום."}}
+      ]
+    }
+  ]
+}
+</script>
+
 <script>
-  /* =========================================
-     הגדרות וואטסאפ — לעדכן כאן את המספר!
-     פורמט בינלאומי: 050-1234567 => 972501234567
-     ========================================= */
-  const WHATSAPP_NUMBER = '972528756618'; // הוואטסאפ של חיים
-  const WHATSAPP_GREETING = 'היי, הגעתי מהאתר ואשמח לשיחת ייעוץ בנושא משכנתא';
+(function(){
+  'use strict';
 
-  // חיבור כל כפתורי הוואטסאפ באתר
-  document.querySelectorAll('.wa-link').forEach(el => {
-    el.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_GREETING)}`;
+  /* ---- וואטסאפ ---- */
+  var WA_NUMBER = '972528756618';
+  var WA_HELLO  = 'היי חיים, הגעתי מהאתר ואשמח לתאם שיחת היכרות בנושא משכנתא.';
+
+  function waUrl(text){
+    return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.wa-link'), function(el){
+    el.href = waUrl(WA_HELLO);
     el.target = '_blank';
-    el.rel = 'noopener';
+    el.rel = 'noopener noreferrer';
   });
 
-  // הטופס שולח את הפרטים כהודעת וואטסאפ מוכנה מראש
-  document.getElementById('leadForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const topic = document.getElementById('topic').value;
-    const msg = document.getElementById('msg').value.trim();
-    let text = `היי, הגעתי מהאתר ואשמח לייעוץ משכנתא.\nשם: ${name}\nטלפון: ${phone}\nנושא: ${topic}`;
-    if (msg) text += `\nפרטים נוספים: ${msg}`;
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+  /* ---- כותרת בגלילה ---- */
+  var header = document.getElementById('siteHeader');
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      header.classList.toggle('scrolled', window.scrollY > 24);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---- תפריט מובייל ---- */
+  var toggle = document.getElementById('navToggle');
+  var panel  = document.getElementById('mobilePanel');
+
+  function setMenu(open){
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'סגירת תפריט' : 'פתיחת תפריט');
+    panel.classList.toggle('open', open);
+  }
+  toggle.addEventListener('click', function(){
+    setMenu(toggle.getAttribute('aria-expanded') !== 'true');
   });
+  Array.prototype.forEach.call(panel.querySelectorAll('a'), function(a){
+    a.addEventListener('click', function(){ setMenu(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') setMenu(false);
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 860) setMenu(false);
+  });
+
+  /* ---- שאלות נפוצות ---- */
+  Array.prototype.forEach.call(document.querySelectorAll('.qa-btn'), function(btn, i){
+    var panelEl = btn.nextElementSibling;
+    var id = 'qa-panel-' + i;
+    panelEl.id = id;
+    btn.setAttribute('aria-controls', id);
+
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      // סגירת השאר — שומר על העמוד רגוע
+      Array.prototype.forEach.call(document.querySelectorAll('.qa-btn'), function(other){
+        if(other !== btn){
+          other.setAttribute('aria-expanded','false');
+          other.nextElementSibling.classList.remove('open');
+        }
+      });
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      panelEl.classList.toggle('open', !open);
+    });
+  });
+
+  /* ---- חשיפה בגלילה ---- */
+  var revealables = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+
+    Array.prototype.forEach.call(revealables, function(el){ io.observe(el); });
+
+    // הדרגה עדינה בתוך אשכולות של כרטיסים
+    ['.appr-grid', '.steps'].forEach(function(sel){
+      var group = document.querySelector(sel);
+      if(!group) return;
+      Array.prototype.forEach.call(group.querySelectorAll('.reveal'), function(el, i){
+        el.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
+      });
+    });
+    // רשת ביטחון: אם משום מה החשיפה לא הופעלה, התוכן חייב להיות גלוי בכל מקרה
+    window.setTimeout(function(){
+      Array.prototype.forEach.call(revealables, function(el){ el.classList.add('in'); });
+    }, 2500);
+  } else {
+    Array.prototype.forEach.call(revealables, function(el){ el.classList.add('in'); });
+  }
+
+  /* ---- טופס ---- */
+  var form = document.getElementById('leadForm');
+  var note = document.getElementById('formNote');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name  = document.getElementById('name');
+    var phone = document.getElementById('phone');
+
+    if(!name.value.trim()){
+      note.textContent = 'רק צריך את השם, ואנחנו ממשיכים.';
+      name.focus();
+      return;
+    }
+    if(phone.value.replace(/\D/g,'').length < 9){
+      note.textContent = 'נראה שחסרות ספרות במספר הטלפון.';
+      phone.focus();
+      return;
+    }
+
+    var topic = document.getElementById('topic').value;
+    var msg   = document.getElementById('msg').value.trim();
+
+    var text = 'היי חיים, הגעתי מהאתר.\n'
+             + 'שם: ' + name.value.trim() + '\n'
+             + 'טלפון: ' + phone.value.trim() + '\n'
+             + 'נושא: ' + topic;
+    if(msg) text += '\n' + msg;
+
+    note.textContent = 'נפתח אצלכם וואטסאפ עם ההודעה מוכנה.';
+    window.open(waUrl(text), '_blank', 'noopener');
+  });
+
+  /* ---- שנה בתחתית ---- */
+  var y = document.getElementById('year');
+  if(y) y.textContent = new Date().getFullYear();
+
+})();
 </script>
 
 </body>
